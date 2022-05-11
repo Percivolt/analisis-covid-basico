@@ -117,6 +117,7 @@ axis(
 )
 
 ```
+
 ##### Otros
 
 ```{r casos-covid-acumulados}
@@ -168,4 +169,35 @@ axis(
 ```
 
 ```
+
+
+#### Casos diarios
+
+```{r casos-nuevos-fallecidos}
+barplot(
+  height=covid$nue_fallecidos,
+  names.arg=format(covid$FECHA, "%Y"),
+  ann = FALSE, 
+  bty = "n", 
+  tck = 0, 
+  xaxt = "n",
+  space = 1,
+  main="Casos fallecidos por día",
+  xlab = "Fecha",
+  ylab = "Casos fallecidos",
+  col = "black"
+)
+
+# Fechas minima y máxima
+x_min <- min(covid$FECHA)
+x_max <- max(covid$FECHA)
+
+# Formato del eje X
+axis(
+  side = 1,
+  at = match(seq(as.Date(x_min), x_max, "years"), covid$FECHA) * (1 + 1),
+  labels = format(seq(as.Date(x_min), x_max, "years"), "%Y"),
+  lwd = 0)
+```
+
 
