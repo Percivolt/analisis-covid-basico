@@ -1,0 +1,16 @@
+---
+title: Análisis de datos de covid-19 de Costa Rica mediante funciones del paquete
+  base de R
+author: "Pedro Báez Marín"
+date: '2022-05-11'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Presentación 
+Este documento presenta gráficos generados a partir de los datos de COVID-19 en Costa Rica compartidos por el Ministerio de Salud en [https://geovision.uned.ac.cr/oges/
+](https://geovision.uned.ac.cr/oges/
+)
